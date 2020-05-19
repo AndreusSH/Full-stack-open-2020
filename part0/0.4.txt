@@ -1,0 +1,25 @@
+
+
+title new note
+note over Browser: 
+the user types something in the browser and hits "save"
+end note over Browser
+Browser->Server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+
+note over Server:
+the server receives a request which instructs the browser to reload the page
+end note  
+
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+Server->Browser: notes.html
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+Server->Browser: main.css
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+Server->Browser: main.js
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+Server->Browser: DATA.json
+
+note over Browser:
+The page is rendered in the browser
+end note  
+

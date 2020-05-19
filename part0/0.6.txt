@@ -1,0 +1,14 @@
+
+
+title New note over 
+note over Browser:
+The user writes a new note, clicks the save "button"
+end note  
+Browser->Server:  HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+note over Server:
+Status Code 201, the request is fulfilled and a new resource is created
+end note  
+Server->Browser: {content: "learn everything", date: "2020-05-19T14:12:58.125Z"}
+
+
+

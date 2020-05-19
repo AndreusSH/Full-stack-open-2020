@@ -1,0 +1,18 @@
+
+
+title SPA 
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+
+Server->Browser: notes.html
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+Server->Browser: main.css
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+Server->Browser: spa.js
+note over Browser:
+The browser executes the spa.js and makes an http call to json
+end note  
+Browser->Server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+Server->Browser: DATA.json
+
+note over Browser:
+The browser receives the data and fills the page with the notes
